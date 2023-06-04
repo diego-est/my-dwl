@@ -1,0 +1,8 @@
+#!/usr/bin/env dash
+
+# set -x
+
+wireplumber &
+swww init &
+swww img -o DP-1 /storage/Pictures/wallpapers/jill_valhalla.png &
+swww img -o DP-2 /storage/Pictures/wallpapers/void_linux_plain_red.png &

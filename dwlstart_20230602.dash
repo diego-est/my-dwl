@@ -1,0 +1,15 @@
+#!/usr/bin/env dash
+
+set -x
+
+cd /home/void/casa/ || exit
+
+QT_QPA_PLATFORM=wayland-gel
+ELM_DISPLAY=wl
+SDL_VIDEODRIVER=wayland
+XDG_SESSION_TYPE=wayland
+MOZ_ENABLE_WAYLAND=1
+
+doas daemonize /usr/bin/socklog
+
+dbus-launch --exit-with-session -- dwl -s 'pee "dwl-bar" "mako" "pipewire" "wireplumber" "swww init" "swww img -o DP-1 /storage/Pictures/wallpapers/jill_valhalla.png" "swww img -o DP-2 /storage/Pictures/wallpapers/void_linux_plain_red.png"'
